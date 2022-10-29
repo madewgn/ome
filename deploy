@@ -1,7 +1,7 @@
 heroku create $1
 heroku git:remote -a $1
 heroku stack:set container
-#heroku addons:create heroku-postgresql
+heroku addons:create heroku-postgresql
 
 git add -f .
 git commit -m p 
