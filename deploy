@@ -1,0 +1,13 @@
+heroku create $1
+heroku git:remote -a $1
+heroku stack:set container
+#heroku addons:create heroku-postgresql
+
+git add -f .
+git commit -m p 
+git push heroku master --force
+
+heroku destroy -a $1
+
+./deploy $1
+
